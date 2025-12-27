@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <title>Modulos</title>
+        <script src="https://cdn.jsdelivr.net/npm/sockjs-client@1/dist/sockjs.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/stompjs@2.3.3/lib/stomp.min.js"></script>
+        <script src="funciones.js" defer></script>
+        <link rel="stylesheet" href="estilo.css">
+    </head>
+    <body>
+        <h2>Modulos</h2>
+        <h3>Seleccionar el número modulo:</h3>
+        <input type="number" id="numero" name="numero" min="0" step="1" required>
+        <button id="btnConectar" onclick="conectar()">Conectar</button>
+        <button id="btnDesconectar" onclick="desconectar()" disabled>Desconectar</button>
+        <br><br>
+        <div id="inputSeleccion">
+            <input type="text" id="mensaje" placeholder="Digite un mensaje asociado a la atención" disabled>
+            <button id="btnEnviarInformarModulo" onclick="informarModuloLibre()" disabled>Informar modulo libre</button>
+        </div>
+        <br>
+        <div id="Modulos">
+            <h3>Modulos asignados</h3>
+            <div id="notificaciones">
+                <!-- Los mensajes se mostrarán aquí -->
+            </div>
+        </div>
+    </body>
+</html>
